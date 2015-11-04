@@ -1,28 +1,28 @@
 {
-"name": "monthpicker",
-"title": "jQuery Monthpicker",
-"description": "A simple but useful month/year picker. Converts a simple input field to two selectboxes (month & year) and returns the unix timestamps of the selection back to the input field. Now with austrian, english, german, spanish, french, hungarian, dutch and italian labels.",
-"keywords": [
-"datepicker",
-"month",
-"year"
-],
-"version": "2.1.1",
-"author": {
-"name": "Oppositus",
-"url": "https://github.com/Oppositus/monthpicker"
-},
-"licenses": [
-{
-"type": "MIT",
-"url": "http://opensource.org/licenses/MIT"
-}
-],
-"bugs": "https://github.com/Oppositus/monthpicker/issues",
-"homepage": "https://github.com/Oppositus/monthpicker",
-"docs": "https://github.com/Oppositus/monthpicker",
-"download": "https://github.com/Oppositus/monthpicker",
-"dependencies": {
-"jquery": ">=1.4"
-}
+  "name": "monthpicker",
+  "title": "jQuery Monthpicker",
+  "description": "A simple but useful month/year picker. Converts a simple input field to two selectboxes (month & year) and returns the unix timestamps of the selection back to the input field. Now with austrian, english, german, spanish, french, hungarian, dutch and italian labels.",
+  "keywords": [
+    "datepicker",
+    "month",
+    "year"
+  ],
+  "version": "2.0.5",
+  "author": {
+    "name": "Dirk Diebel",
+    "url": "https://github.com/ddiebel/monthpicker"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "bugs": "https://github.com/ddiebel/monthpicker/issues",
+  "homepage": "https://github.com/ddiebel/monthpicker",
+  "docs": "https://github.com/ddiebel/monthpicker",
+  "download": "https://github.com/ddiebel/monthpicker",
+  "dependencies": {
+    "jquery": ">=1.4"
+  }
 }
