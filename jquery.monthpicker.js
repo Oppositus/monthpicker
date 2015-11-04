@@ -16,6 +16,7 @@
  *  maxYear     - the maximum year the selectbox should show
  *  lang        - language in which all labels should be generated
  *  month       - a map of month labels (overrides the lang parameter if set)
+ *  value       - an unix timestamp for initial value
  *  f.e. german months
  *   month : ['January','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember']
  * </usage>
@@ -81,12 +82,12 @@
             }
         } else {
             for (i = options.minYear; i <= options.maxYear; i++) {
-                yearbox += '<option value="' + i + (i === year ? ' selected' : '') + '">' + i + '</option>';
+                yearbox += '<option value="' + i + (i === year ? '" selected="selected"' : '"') + '>' + i + '</option>';
             }
         }
 
         $.map(options.month, function (n, i) {
-            monthbox += '<option value="' + i + (i === mnth ? ' selected' : '') + '">' + n + '</option>';
+            monthbox += '<option value="' + i + (i === mnth ? '" selected="selected"' : '"') + '>' + n + '</option>';
         });
 
 
