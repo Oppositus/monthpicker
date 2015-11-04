@@ -50,12 +50,16 @@
             },
             "nl" : {
                 "month" : ['januari', 'februari', 'maart', 'april', 'mei', 'juni', 'juli', 'augustus', 'september', 'oktober', 'november', 'december']
+            },
+            "ru" : {
+                "month" : ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
             }
         }, defaults = {
             minYear: "1980",
-            maxYear: "2010",
-            month: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
-        }, i, yearbox, monthbox, obj = $(this);
+            maxYear: "2015",
+            month: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            value: null
+        }, i, yearbox, monthbox, dt, mnth, year, obj = $(this);
 
         if (!$.isEmptyObject(options)) {
             defaults = $.extend(defaults, month[options.lang]);
@@ -65,18 +69,24 @@
 
         obj.hide();
 
+        if (options.value) {
+            dt = new Date(options.value * 1000); // options.value must be the UNIX timestamp
+            year = dt.getFullYear();
+            mnth = dt.getMonth();
+        }
+
         if (options.minYear > options.maxYear) {
             for (i = options.minYear; i >= options.maxYear; i--) {
-                yearbox += '<option value="' + i + '">' + i + '</option>';
+                yearbox += '<option value="' + i + (i === year ? ' selected' : '') + '">' + i + '</option>';
             }
         } else {
             for (i = options.minYear; i <= options.maxYear; i++) {
-                yearbox += '<option value="' + i + '">' + i + '</option>';
+                yearbox += '<option value="' + i + (i === year ? ' selected' : '') + '">' + i + '</option>';
             }
         }
 
         $.map(options.month, function (n, i) {
-            monthbox += '<option value="' + i + '">' + n + '</option>';
+            monthbox += '<option value="' + i + (i === mnth ? ' selected' : '') + '">' + n + '</option>';
         });
 
 
@@ -88,9 +98,11 @@
 
         var createTimestamp = function () {
             obj.attr('value', Math.round(Date.UTC(yearElement.val(), monthElement.val(), 1)) / 1000);
-        }
+        };
 
         yearElement.change(createTimestamp);
         monthElement.change(createTimestamp);
+
+        createTimestamp();
     };
 })(jQuery);

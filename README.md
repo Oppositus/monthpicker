@@ -14,6 +14,7 @@ This plugin creates two selectboxes where the user can select month and year. Af
         maxYear     - the maximum year the selectbox should show
         lang        - language in which all labels should be generated
         month       - a map of month labels (overrides the lang parameter if set)
+        value       - initial value (unix timestamp)
         f.e. german months
         month : ['January','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember']
         
@@ -91,6 +92,17 @@ $(document).ready(function() {
 </script>
 ````
 
+### Set initial value:
+
+Default : none
+
+````html
+<script>
+$(document).ready(function() {
+	$('#yearpicker2').monthpicker({'value' : 801964800}); // 1995-may-01
+});
+</script>
+````
 
 ### Licence:
 Copyright (c) Dirk Diebel. Released under MIT License

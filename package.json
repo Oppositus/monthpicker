@@ -1,6 +1,6 @@
 {
   "name": "monthpicker",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A simple but useful month/year picker. Converts a simple input field to two selectboxes (month & year) and returns the unix timestamps of the selection back to the input field. Now with austrian, english, german, spanish, french, hungarian, dutch and italian labels.",
   "main": "jquery.monthpicker.js",
   "scripts": {
@@ -8,16 +8,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ddiebel/monthpicker.git"
+    "url": "https://github.com/Oppositus/monthpicker.git"
   },
   "keywords": [
     "jquery-plugin",
     "ecosystem:jquery"
   ],
-  "author": "Dirk Diebel",
-  "license": "ISC",
+  "author": "Oppositus",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ddiebel/monthpicker/issues"
+    "url": "https://github.com/Oppositus/monthpicker/issues"
   },
-  "homepage": "https://github.com/ddiebel/monthpicker"
+  "homepage": "https://github.com/Oppositus/monthpicker"
 }
