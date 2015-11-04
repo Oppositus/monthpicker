@@ -78,7 +78,7 @@
 
         if (options.minYear > options.maxYear) {
             for (i = options.minYear; i >= options.maxYear; i--) {
-                yearbox += '<option value="' + i + (i === year ? ' selected' : '') + '">' + i + '</option>';
+                yearbox += '<option value="' + i + (i === year ? '" selected="selected"' : '"') + '>' + i + '</option>';
             }
         } else {
             for (i = options.minYear; i <= options.maxYear; i++) {
